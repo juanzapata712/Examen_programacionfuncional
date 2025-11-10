@@ -1,4 +1,4 @@
-package entidades; // O el nombre de tu paquete
+package entidades; 
 
 import java.time.LocalDate;
 
