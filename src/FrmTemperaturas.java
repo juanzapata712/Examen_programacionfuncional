@@ -64,7 +64,11 @@ public class FrmTemperaturas extends JFrame {
         setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
         setLocationRelativeTo(null);
 
+<<<<<<< HEAD
        
+=======
+        
+>>>>>>> 9d135b18dc8e7a26841ceedb082986e79f3c0d9f
         JToolBar tbControles = new JToolBar();
         tbControles.add(new JLabel(" Ciudad: "));
         cmbCiudad = new JComboBox<>();
@@ -79,19 +83,31 @@ public class FrmTemperaturas extends JFrame {
         dccHasta = new DateChooserCombo();
         tbControles.add(dccHasta);
 
+<<<<<<< HEAD
       
+=======
+        
+>>>>>>> 9d135b18dc8e7a26841ceedb082986e79f3c0d9f
         JButton btnGraficar = new JButton("Graficar");
         btnGraficar.addActionListener(e -> btnGraficarClick()); 
         tbControles.add(btnGraficar);
 
+<<<<<<< HEAD
         
+=======
+     
+>>>>>>> 9d135b18dc8e7a26841ceedb082986e79f3c0d9f
         JButton btnCalcularEstadisticas = new JButton("Calcular Estadísticas");
         btnCalcularEstadisticas.addActionListener(e -> btnCalcularEstadisticasClick()); 
         tbControles.add(btnCalcularEstadisticas);
 
         add(tbControles, BorderLayout.NORTH);
 
+<<<<<<< HEAD
         
+=======
+      
+>>>>>>> 9d135b18dc8e7a26841ceedb082986e79f3c0d9f
         tpResultados = new JTabbedPane();
         pnlGrafica = new JPanel();
         pnlEstadisticas = new JPanel();
@@ -114,7 +130,11 @@ public class FrmTemperaturas extends JFrame {
             
             TimeSeries series = new TimeSeries("Temperatura");
             for (Temperatura item : datosFiltrados) {
+<<<<<<< HEAD
                 
+=======
+               
+>>>>>>> 9d135b18dc8e7a26841ceedb082986e79f3c0d9f
                 series.add(new Day(item.getFecha().getDayOfMonth(),
                                  item.getFecha().getMonthValue(),
                                  item.getFecha().getYear()),
@@ -122,7 +142,11 @@ public class FrmTemperaturas extends JFrame {
             }
             TimeSeriesCollection dataset = new TimeSeriesCollection(series);
 
+<<<<<<< HEAD
            
+=======
+         
+>>>>>>> 9d135b18dc8e7a26841ceedb082986e79f3c0d9f
             JFreeChart graficador = ChartFactory.createTimeSeriesChart(
                     "Evolución de Temperatura en " + ciudad,
                     "Fecha",
@@ -153,7 +177,11 @@ public class FrmTemperaturas extends JFrame {
            
             var estadisticas = TemperaturaServicio.getEstadisticas(temperaturas, ciudad, desde, hasta);
 
+<<<<<<< HEAD
       
+=======
+            
+>>>>>>> 9d135b18dc8e7a26841ceedb082986e79f3c0d9f
             pnlEstadisticas.removeAll();
             pnlEstadisticas.setLayout(new GridBagLayout());
             
